@@ -1,4 +1,4 @@
 dataset.parquet
-setup/tmp
+build-resources/tmp
 .claude
 .vscode

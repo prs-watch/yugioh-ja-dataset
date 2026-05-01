@@ -25,13 +25,13 @@ SELECT  C.id                                                                    
 FROM './build-resources/tmp/cards.parquet' C
 LEFT OUTER JOIN './build-resources/tmp/yaml-yugi.parquet' Y
 ON ( C.name = Y.name.en OR CAST(C.id AS VARCHAR) = CAST(Y.password AS VARCHAR) )
-INNER JOIN './build-resources/maps/type-map.json' T
+LEFT OUTER JOIN './build-resources/maps/type-map.json' T
 ON C.type = T.en
-INNER JOIN './build-resources/maps/frame-type-map.json' FT
+LEFT OUTER JOIN './build-resources/maps/frame-type-map.json' FT
 ON C.frameType = FT.en
-INNER JOIN './build-resources/maps/race-map.json' R
+LEFT OUTER JOIN './build-resources/maps/race-map.json' R
 ON C.race = R.en
-INNER JOIN './build-resources/maps/attribute-map.json' A
+LEFT OUTER JOIN './build-resources/maps/attribute-map.json' A
 ON C.attribute = A.en
 CROSS JOIN LINKMARKER_MAP
 WHERE C.type != 'Skill Card' ) TO 'dataset.parquet' (FORMAT 'PARQUET');
