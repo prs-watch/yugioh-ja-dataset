@@ -1,0 +1,34 @@
+[
+  {
+    "en": "Top",
+    "ja": "上"
+  },
+  {
+    "en": "Bottom",
+    "ja": "下"
+  },
+  {
+    "en": "Right",
+    "ja": "右"
+  },
+  {
+    "en": "Left",
+    "ja": "左"
+  },
+  {
+    "en": "Top-Right",
+    "ja": "右上"
+  },
+  {
+    "en": "Top-Left",
+    "ja": "左上"
+  },
+  {
+    "en": "Bottom-Right",
+    "ja": "右下"
+  },
+  {
+    "en": "Bottom-Left",
+    "ja": "左下"
+  }
+]

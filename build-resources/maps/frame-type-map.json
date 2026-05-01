@@ -1,0 +1,66 @@
+[
+  {
+    "en": "effect_pendulum",
+    "ja": "ペンデュラム効果モンスター"
+  },
+  {
+    "en": "ritual_pendulum",
+    "ja": "儀式ペンデュラムモンスター"
+  },
+  {
+    "en": "normal_pendulum",
+    "ja": "通常ペンデュラムモンスター"
+  },
+  {
+    "en": "synchro_pendulum",
+    "ja": "シンクロペンデュラムモンスター"
+  },
+  {
+    "en": "effect",
+    "ja": "効果モンスター"
+  },
+  {
+    "en": "normal",
+    "ja": "通常モンスター"
+  },
+  {
+    "en": "synchro",
+    "ja": "シンクロモンスター"
+  },
+  {
+    "en": "ritual",
+    "ja": "儀式モンスター"
+  },
+  {
+    "en": "spell",
+    "ja": "魔法"
+  },
+  {
+    "en": "trap",
+    "ja": "罠"
+  },
+  {
+    "en": "fusion",
+    "ja": "融合モンスター"
+  },
+  {
+    "en": "token",
+    "ja": "トークン"
+  },
+  {
+    "en": "fusion_pendulum",
+    "ja": "融合ペンデュラムモンスター"
+  },
+  {
+    "en": "link",
+    "ja": "リンクモンスター"
+  },
+  {
+    "en": "xyz",
+    "ja": "エクシーズモンスター"
+  },
+  {
+    "en": "xyz_pendulum",
+    "ja": "エクシーズペンデュラムモンスター"
+  }
+]

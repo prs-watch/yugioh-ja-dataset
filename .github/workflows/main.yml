@@ -1,0 +1,29 @@
+name: Build Japanese dataset of Yu-Gi-Oh cards
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install DuckDB
+        run: |
+          curl https://install.duckdb.org | sh
+          echo "$HOME/.duckdb/cli/latest" >> $GITHUB_PATH
+
+      - name: Build dataset
+        run: bash build.sh
+
+      - name: Release dataset.parquet
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: latest
+          name: Latest Dataset
+          files: dataset.parquet

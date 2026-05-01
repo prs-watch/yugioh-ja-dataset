@@ -1,0 +1,134 @@
+[
+  {
+    "en": "Equip",
+    "ja": "装備魔法"
+  },
+  {
+    "en": "Aqua",
+    "ja": "水族"
+  },
+  {
+    "en": "Field",
+    "ja": "フィールド魔法"
+  },
+  {
+    "en": "Ritual",
+    "ja": "儀式魔法"
+  },
+  {
+    "en": "Reptile",
+    "ja": "爬虫類族"
+  },
+  {
+    "en": "Zombie",
+    "ja": "アンデット族"
+  },
+  {
+    "en": "Normal",
+    "ja": "通常魔法"
+  },
+  {
+    "en": "Beast",
+    "ja": "獣族"
+  },
+  {
+    "en": "Fairy",
+    "ja": "天使族"
+  },
+  {
+    "en": "Dragon",
+    "ja": "ドラゴン族"
+  },
+  {
+    "en": "Counter",
+    "ja": "カウンター罠"
+  },
+  {
+    "en": "Winged Beast",
+    "ja": "鳥獣族"
+  },
+  {
+    "en": "Pyro",
+    "ja": "炎族"
+  },
+  {
+    "en": "Creator God",
+    "ja": "創造神族"
+  },
+  {
+    "en": "Quick-Play",
+    "ja": "速攻魔法"
+  },
+  {
+    "en": "Warrior",
+    "ja": "戦士族"
+  },
+  {
+    "en": "Beast-Warrior",
+    "ja": "獣戦士族"
+  },
+  {
+    "en": "Psychic",
+    "ja": "サイキック族"
+  },
+  {
+    "en": "Sea Serpent",
+    "ja": "海竜族"
+  },
+  {
+    "en": "Cyberse",
+    "ja": "サイバース族"
+  },
+  {
+    "en": "Illusion",
+    "ja": "幻想魔族"
+  },
+  {
+    "en": "Divine-Beast",
+    "ja": "幻神獣族"
+  },
+  {
+    "en": "Continuous",
+    "ja": "永続魔法"
+  },
+  {
+    "en": "Insect",
+    "ja": "昆虫族"
+  },
+  {
+    "en": "Fish",
+    "ja": "魚族"
+  },
+  {
+    "en": "Fiend",
+    "ja": "悪魔族"
+  },
+  {
+    "en": "Spellcaster",
+    "ja": "魔法使い族"
+  },
+  {
+    "en": "Machine",
+    "ja": "機械族"
+  },
+  {
+    "en": "Dinosaur",
+    "ja": "恐竜族"
+  },
+  {
+    "en": "Rock",
+    "ja": "岩石族"
+  },
+  {
+    "en": "Plant",
+    "ja": "植物族"
+  },
+  {
+    "en": "Wyrm",
+    "ja": "幻竜族"
+  },
+  {
+    "en": "Thunder",
+    "ja": "雷族"
+  }
+]
