@@ -1,4 +1,4 @@
-# yugioh-dataset
+# yugioh-ja-dataset
 
 遊戯王カードの日本語データセットを生成するパイプラインです。
 
