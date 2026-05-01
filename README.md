@@ -2,27 +2,11 @@
 
 遊戯王カードの日本語データセットを生成するパイプラインです。
 
-## ディレクトリ構成
+## データセットのダウンロード
 
-```
-yugioh-dataset/
-├── build.sh                        # メインビルドスクリプト
-├── dataset.parquet                 # build.sh実行後に生成されるデータセット
-├── build-resources/
-│   ├── consts.sh                   # データソース URL 定数
-│   ├── queries/
-│   │   ├── export-cards.sql        # YGOPRODeck JSON → Parquet 変換
-│   │   ├── export-yaml-yugi.sql    # yaml-yugi YAML → Parquet 変換
-│   │   └── export-dataset.sql      # 2ソース結合・日本語データセット生成
-│   └── maps/
-│       ├── attribute-map.json      # 属性 英語→日本語 マッピング
-│       ├── frame-type-map.json     # フレーム種別 英語→日本語 マッピング
-│       ├── linkmarker-map.json     # リンクマーカー 英語→日本語 マッピング
-│       ├── race-map.json           # 種族 英語→日本語 マッピング
-│       └── type-map.json           # カード種別 英語→日本語 マッピング
-└── .github/workflows/
-    └── main.yml                    # GitHub Actions ワークフロー
-```
+最新のデータセットは GitHub Releases から取得できます。
+
+https://github.com/prs-watch/yugioh-ja-dataset/releases/tag/latest
 
 ## データセット仕様
 
@@ -56,14 +40,42 @@ yugioh-dataset/
 | [YGOPRODeck API](https://ygoprodeck.com/api-guide/) | カードステータス（ATK / DEF / レベル / 属性など） |
 | [yaml-yugi](https://github.com/DawnbrandBots/yaml-yugi) | 日本語カード名・日本語テキスト |
 
-## 必要環境
+## 開発者向け情報
+
+### 必要環境
 
 - [DuckDB CLI](https://duckdb.org/docs/installation/)
 - `bash`, `curl`, `unzip`
 
-## ローカル実行
+### ディレクトリ構成
+
+```
+yugioh-dataset/
+├── build.sh                        # メインビルドスクリプト
+├── dataset.parquet                 # build.sh実行後に生成されるデータセット
+├── build-resources/
+│   ├── consts.sh                   # データソース URL 定数
+│   ├── queries/
+│   │   ├── export-cards.sql        # YGOPRODeck JSON → Parquet 変換
+│   │   ├── export-yaml-yugi.sql    # yaml-yugi YAML → Parquet 変換
+│   │   └── export-dataset.sql      # 2ソース結合・日本語データセット生成
+│   └── maps/
+│       ├── attribute-map.json      # 属性 英語→日本語 マッピング
+│       ├── frame-type-map.json     # フレーム種別 英語→日本語 マッピング
+│       ├── linkmarker-map.json     # リンクマーカー 英語→日本語 マッピング
+│       ├── race-map.json           # 種族 英語→日本語 マッピング
+│       └── type-map.json           # カード種別 英語→日本語 マッピング
+└── .github/workflows/
+    └── main.yml                    # GitHub Actions ワークフロー
+```
+
+### ローカル実行
 
 ```bash
 # dataset.parquet生成
 $ bash build.sh
 ```
+
+### GitHub Actions
+
+毎日 UTC 17:00（JST 翌 02:00）に自動実行され、生成した `dataset.parquet` を GitHub Releases の `latest` タグへ公開します。`workflow_dispatch` で手動実行も可能です。
