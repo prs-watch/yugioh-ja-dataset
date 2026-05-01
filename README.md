@@ -30,7 +30,6 @@ https://github.com/prs-watch/yugioh-ja-dataset/releases/tag/latest
 | `linkval` | INTEGER | リンク数値 |
 | `linkmarkers` | VARCHAR[] | リンクマーカー位置 |
 
-- スキルカードは除外されています。
 - `text_ja` はペンデュラムモンスターの場合、`[テキスト]` と `[ペンデュラムテキスト]` の2セクション形式で格納されます。
 
 ## データソース
