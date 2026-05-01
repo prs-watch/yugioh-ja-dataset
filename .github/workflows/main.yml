@@ -2,6 +2,8 @@ name: Build Japanese dataset of Yu-Gi-Oh cards
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "0 17 * * *"
 
 permissions:
   contents: write
