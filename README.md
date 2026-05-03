@@ -10,7 +10,7 @@ https://github.com/prs-watch/yugioh-ja-dataset/releases/tag/latest
 
 ## データセット仕様
 
-出力ファイル: `dataset.parquet`
+出力ファイル: `dataset.parquet` / `dataset.csv` / `dataset.json`
 
 | カラム名 | 型 | 説明 |
 |---|---|---|
@@ -51,7 +51,9 @@ https://github.com/prs-watch/yugioh-ja-dataset/releases/tag/latest
 ```
 yugioh-dataset/
 ├── build.sh                        # メインビルドスクリプト
-├── dataset.parquet                 # build.sh実行後に生成されるデータセット
+├── dataset.parquet                 # build.sh実行後に生成されるデータセット（Parquet形式）
+├── dataset.csv                     # build.sh実行後に生成されるデータセット（CSV形式）
+├── dataset.json                    # build.sh実行後に生成されるデータセット（JSON形式）
 ├── build-resources/
 │   ├── consts.sh                   # データソース URL 定数
 │   ├── queries/
@@ -77,4 +79,4 @@ $ bash build.sh
 
 ### GitHub Actions
 
-毎日 UTC 17:00（JST 翌 02:00）に自動実行され、生成した `dataset.parquet` を GitHub Releases の `latest` タグへ公開します。`workflow_dispatch` で手動実行も可能です。
+毎日 UTC 17:00（JST 翌 02:00）に自動実行され、生成した `dataset.parquet` / `dataset.csv` / `dataset.json` を GitHub Releases の `latest` タグへ公開します。
