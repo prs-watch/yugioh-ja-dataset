@@ -1,4 +1,6 @@
 dataset.parquet
+dataset.csv
+dataset.json
 build-resources/tmp
 .claude
 .vscode

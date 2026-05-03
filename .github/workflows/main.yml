@@ -28,4 +28,7 @@ jobs:
         with:
           tag_name: latest
           name: Latest Dataset
-          files: dataset.parquet
+          files: |
+            dataset.parquet
+            dataset.csv
+            dataset.json

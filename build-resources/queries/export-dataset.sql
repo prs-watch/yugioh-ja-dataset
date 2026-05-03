@@ -1,5 +1,6 @@
 -- export japanese datase of yugioh to `dataset.parquet`.
-COPY(
+
+CREATE OR REPLACE TEMP VIEW DATASET AS (
 WITH LINKMARKER_MAP AS
 (
 	SELECT  MAP(LIST(en),LIST(ja)) AS m
@@ -34,4 +35,11 @@ ON C.race = R.en
 LEFT OUTER JOIN './build-resources/maps/attribute-map.json' A
 ON C.attribute = A.en
 CROSS JOIN LINKMARKER_MAP
-WHERE C.type != 'Skill Card' ) TO 'dataset.parquet' (FORMAT 'PARQUET');
+WHERE C.type != 'Skill Card' );
+
+-- parquet
+ COPY DATASET TO 'dataset.parquet' (FORMAT 'PARQUET');
+-- csv
+ COPY DATASET TO 'dataset.csv' (FORMAT 'CSV', DELIMITER ',', HEADER);
+-- json
+ COPY DATASET TO 'dataset.json' (FORMAT 'JSON');
